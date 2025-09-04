@@ -672,7 +672,8 @@ boolean hunt_bounty(bounty b) {
   } else if(can_adventure(b.location) ||
             (b.type == SPECIAL &&
             mall_price(CONTENT_ITEMS[b.location]) <= maxSpecial && 
-            CONTENT_ITEMS[b.location] != $item[llama lama gong] )) {
+            CONTENT_ITEMS[b.location] != $item[llama lama gong] &&
+            CONTENT_ITEMS[b.location] != $item[empty agua de vida bottle] )) {
     if(useBan)
       buy_banishers();
     
